@@ -1,0 +1,17 @@
+[Unit]
+Description=Raspberry Pi camera MCP server on wlan0
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USER
+Group=YOUR_USER
+WorkingDirectory=/home/YOUR_USER/raspi-cam-mcp
+EnvironmentFile=/etc/raspi-cam-mcp.env
+ExecStart=/usr/bin/bash /home/YOUR_USER/raspi-cam-mcp/scripts/start-wlan0.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
