@@ -30,6 +30,7 @@ node -v
 
 npx get-pnpm
 ```
+- Githubからプロジェクトをcloneして、buildを実行する。
 
 ```bash
 pnpm install --frozen-lockfile
