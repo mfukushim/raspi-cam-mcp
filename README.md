@@ -15,6 +15,12 @@ Raspberry Pi の CSI カメラから JPEG を１枚撮り、MCP の `capture_ima
 ## 準備
 
 - Raspberry Pi OS で `rpicam-still` が使えることを確認してください。先に `rpicam-hello --list-cameras` と `rpicam-still -n -t 1000 -o test.jpg` を実行すると切り分けが簡単です。
+  ラスパイハードと組み込みカメラの接続とカメラ基本アプリ rpicam-apps の組み込み。  
+  ```
+  sudo apt update
+  sudo apt install rpicam-apps
+  ```
+
 - Node.js 22 以上と pnpm を用意します。( https://nodesource.com/products/distributions などで Ubuntu の node 22以降を設定してください。)
 
 ```bash
